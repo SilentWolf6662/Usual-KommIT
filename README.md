@@ -1,2 +1,2 @@
 # Usual-KommIT
-Exam project in Komm/IT class
+Exam project in Communication & IT class

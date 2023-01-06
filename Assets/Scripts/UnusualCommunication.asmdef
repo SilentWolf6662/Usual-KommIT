@@ -1,7 +1,7 @@
 {
     "name": "UnusualCommunication",
     "rootNamespace": "UnusualCommunication",
-    "references": [],
+    "references": ["GUID:c0f40ff276944ec79856793f392bf672","GUID:b1a59e0ee1064f4495dec7b39b013db5","GUID:db610fd6a4e1afd488e4ab12ba506885"],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

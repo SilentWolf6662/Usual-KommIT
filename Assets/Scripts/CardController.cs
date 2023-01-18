@@ -18,6 +18,10 @@
 
 using System.Collections;
 using UnityEngine;
+using static UnityEngine.Debug;
+using static UnityEngine.Physics2D;
+// ReSharper disable Unity.PerformanceCriticalCodeInvocation
+// ReSharper disable HeapView.ObjectAllocation
 
 #endregion
 namespace UnusualCommunication
@@ -50,36 +54,31 @@ namespace UnusualCommunication
 			cardBack.GetComponent<SpriteRenderer>().sprite = backSprite;
 			cardBack.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
-			int cardWidth = (int)frontSprite.rect.width;
-			int cardHeight = (int)frontSprite.rect.height;
-
-			Debug.Log(cardWidth);
-			Debug.Log(cardHeight);
-
 			card.tag = "CardTag";
 			Transform transform1 = transform;
 			card.transform.parent = transform1;
 			card.transform.position = transform1.position;
 			card.AddComponent<BoxCollider2D>();
-			card.GetComponent<BoxCollider2D>().size = new Vector2(cardWidth / 10, cardHeight / 10);
+			card.GetComponent<BoxCollider2D>().size = new Vector2(10f, 6.5f);
 
-			Debug.Log("Start done");
+			Log("Start done");
 		}
 
 
 		// Update is called once per frame
 		private void Update()
 		{
-			if ((Input.GetMouseButtonDown(0) || Input.touchCount > 0))
+			if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
 			{
-				Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
-				RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+				//Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
+				print(Input.mousePosition.ToString());
+				RaycastHit2D hit = Raycast(Input.mousePosition, Input.mousePosition);
 				// we hit a card
 				if (hit.collider != null)
 				{
-					if (hit.collider.tag == "CardTag")
+					if (hit.collider.CompareTag("CardTag"))
 					{
-						Debug.Log(hit.collider.transform.parent.name);
+						Log(hit.collider.transform.parent.name);
 						StartCoroutine(uncoverCard(hit.collider.gameObject.transform, true));
 					}
 				}

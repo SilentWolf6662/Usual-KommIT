@@ -24,36 +24,31 @@ namespace UnusualCommunication
 {
 	public class CardController : MonoBehaviour
 	{
-		[SerializeField] private Sprite frontSprite;
-		[SerializeField] private Sprite backSprite;
-		[SerializeField] private CardData cardData;
-		[SerializeField] private bool shouldFlip = true;
-		[SerializeField] private bool bypassRaycast;
+		public Sprite frontSprite;
+		public Sprite backSprite;
+		public float uncoverTime = 12.0f;
+		private Camera camera1;
 
-		[SerializeField] private float uncoverTime = 12;
-		private Camera cam;
-
+		// Use this for initialization
 		private void Start()
 		{
-			cam = Camera.main;
+			camera1 = Camera.main;
 			GameObject card = new GameObject("Card"); // parent object
 			GameObject cardFront = new GameObject("CardFront");
 			GameObject cardBack = new GameObject("CardBack");
 
 			cardFront.transform.parent = card.transform; // make front child of card
-			cardBack.transform.parent = card.transform; // make front child of card
+			cardBack.transform.parent = card.transform; // make back child of card
 
-			// front (graphic)
+			// front (motive)
 			cardFront.AddComponent<SpriteRenderer>();
-			SpriteRenderer cardFrontSR = cardFront.GetComponent<SpriteRenderer>();
-			cardFrontSR.sprite = frontSprite;
-			cardFrontSR.sortingOrder = -1;
+			cardFront.GetComponent<SpriteRenderer>().sprite = frontSprite;
+			cardFront.GetComponent<SpriteRenderer>().sortingOrder = -1;
 
 			// back
 			cardBack.AddComponent<SpriteRenderer>();
-			SpriteRenderer cardBackSR = cardBack.GetComponent<SpriteRenderer>();
-			cardBackSR.sprite = backSprite;
-			cardBackSR.sortingOrder = 1;
+			cardBack.GetComponent<SpriteRenderer>().sprite = backSprite;
+			cardBack.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
 			int cardWidth = (int)frontSprite.rect.width;
 			int cardHeight = (int)frontSprite.rect.height;
@@ -61,72 +56,71 @@ namespace UnusualCommunication
 			Debug.Log(cardWidth);
 			Debug.Log(cardHeight);
 
-			card.tag = "Card";
-			Transform cardTransform = transform;
-			card.transform.parent = cardTransform;
-			card.transform.position = cardTransform.position;
+			card.tag = "CardTag";
+			Transform transform1 = transform;
+			card.transform.parent = transform1;
+			card.transform.position = transform1.position;
 			card.AddComponent<BoxCollider2D>();
-			card.GetComponent<BoxCollider2D>().size = new Vector2(10, 6.4f);
+			card.GetComponent<BoxCollider2D>().size = new Vector2(cardWidth / 10, cardHeight / 10);
 
 			Debug.Log("Start done");
 		}
 
-		private void Update () 
+
+		// Update is called once per frame
+		private void Update()
 		{
-			if(Input.GetMouseButtonDown(0) || Input.touchCount > 0 || Input.GetKeyDown(KeyCode.Space)) 
+			if ((Input.GetMouseButtonDown(0) || Input.touchCount > 0))
 			{
-				Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+				Ray ray = camera1.ScreenPointToRay(Input.mousePosition);
 				RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-				
-				// We hit a card
-				if (shouldFlip)
+				// we hit a card
+				if (hit.collider != null)
 				{
-					if (hit.collider == null) return;
-					Debug.Log(hit.transform.parent.name);
-					FlipCard(hit.collider.gameObject.transform);
+					if (hit.collider.tag == "CardTag")
+					{
+						Debug.Log(hit.collider.transform.parent.name);
+						StartCoroutine(uncoverCard(hit.collider.gameObject.transform, true));
+					}
 				}
 			}
 		}
 
-		public CardData GetCardData() => cardData;
-		public void SetCardData(CardData data) => cardData = data;
-
-		public void FlipCard(Transform card) => StartCoroutine(UncoverCard(card, true));
-
-		private IEnumerator UncoverCard(Transform card, bool uncover)
+		private IEnumerator uncoverCard(Transform card, bool uncover)
 		{
 
 			float minAngle = uncover ? 0 : 180;
-			float maxAngle = uncover ? 180 : 0; 
+			float maxAngle = uncover ? 180 : 0;
 
 			float t = 0;
 			bool uncovered = false;
 
-			while(t < 1f) 
+			while (t < 1f)
 			{
-				t += Time.deltaTime * uncoverTime;;
+				t += Time.deltaTime * uncoverTime;
+				;
 
 				float angle = Mathf.LerpAngle(minAngle, maxAngle, t);
 				card.eulerAngles = new Vector3(0, angle, 0);
 
-				if (angle is >= 90 and < 180 or >= 270 and < 360 && !uncovered) 
+				if (angle is >= 90 and < 180 or >= 270 and < 360 && !uncovered)
 				{
 					uncovered = true;
-					for(int i = 0; i < card.childCount; i++) 
+					for (int i = 0; i < card.childCount; i++)
 					{
 						// reverse sorting order to show the otherside of the card
 						// otherwise you would still see the same sprite because they are sorted 
 						// by order not distance (by default)
 						Transform c = card.GetChild(i);
-						SpriteRenderer cardNextSprite = c.GetComponent<SpriteRenderer>();
-						cardNextSprite.flipX = true;
-						cardNextSprite.sortingOrder *= -1;
+						c.GetComponent<SpriteRenderer>().sortingOrder *= -1;
 
 						yield return null;
 					}
 				}
+
 				yield return null;
 			}
+
 			yield return 0;
 		}
 	}

@@ -157,10 +157,10 @@ RectTransform:
   m_Father: {fileID: 735701217}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 48, y: -17.75}
+  m_SizeDelta: {x: 10, y: 35.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77385358
 MonoBehaviour:
@@ -176,9 +176,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &77385359
 MonoBehaviour:
@@ -252,10 +249,10 @@ RectTransform:
   m_Father: {fileID: 735701217}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 91, y: -17.75}
+  m_SizeDelta: {x: 10, y: 35.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189296721
 MonoBehaviour:
@@ -271,9 +268,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &189296722
 MonoBehaviour:
@@ -327,7 +321,7 @@ GameObject:
   - component: {fileID: 199863214}
   m_Layer: 5
   m_Name: Image (1)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,7 +334,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199863212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -250}
+  m_LocalPosition: {x: 0, y: 0, z: -249.9999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -366,9 +360,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &199863215
 MonoBehaviour:
@@ -384,9 +375,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -476,6 +467,61 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &645805849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645805851}
+  - component: {fileID: 645805850}
+  m_Layer: 0
+  m_Name: InGameConsole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &645805850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645805849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959ddacec3437154f9744d55a707c55c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowConsole: 1
+  ShowStackTrace: 1
+  ShowTitle: 1
+  ShowOrder: 1
+  KeyCode: 92
+  KeyString: 
+  GUIAnchor: 2
+  GUIHeight: 2
+  GUIFontSize: 15
+  GUIColor: {r: 0, g: 0, b: 0, a: 1}
+  DoNotDestroyOnLoad: 0
+--- !u!4 &645805851
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645805849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701138827
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +536,7 @@ GameObject:
   - component: {fileID: 701138829}
   m_Layer: 5
   m_Name: Image (0)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -503,7 +549,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701138827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -250}
+  m_LocalPosition: {x: 0, y: 0, z: -249.99994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -529,9 +575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &701138830
 MonoBehaviour:
@@ -547,9 +590,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -681,7 +724,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &735701217
 RectTransform:
   m_ObjectHideFlags: 0
@@ -787,7 +830,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &824240817
 Canvas:
   m_ObjectHideFlags: 0
@@ -797,7 +840,7 @@ Canvas:
   m_GameObject: {fileID: 824240814}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 2
   m_Camera: {fileID: 963194227}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -817,8 +860,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824240814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 0.25660014, y: 0.25660014, z: 0.25660014}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1643330913}
@@ -828,9 +871,56 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 1}
+  m_SizeDelta: {x: 800, y: 449.99997}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &825032714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 825032716}
+  - component: {fileID: 825032715}
+  m_Layer: 0
+  m_Name: Img
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &825032715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825032714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd02b182d700aad488e0e9683451877d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
+  backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
+  uncoverTime: 12
+--- !u!4 &825032716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825032714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.081275, y: 4.291539, z: 31.55191}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &920820854
 GameObject:
   m_ObjectHideFlags: 0
@@ -845,7 +935,7 @@ GameObject:
   - component: {fileID: 920820856}
   m_Layer: 5
   m_Name: Image (4)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -884,9 +974,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &920820857
 MonoBehaviour:
@@ -902,9 +989,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -940,7 +1027,7 @@ GameObject:
   - component: {fileID: 947494813}
   m_Layer: 5
   m_Name: Image (5)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -979,9 +1066,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &947494814
 MonoBehaviour:
@@ -997,9 +1081,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1119,7 +1203,7 @@ GameObject:
   - component: {fileID: 1090596382}
   m_Layer: 5
   m_Name: Image (3)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1158,9 +1242,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &1090596383
 MonoBehaviour:
@@ -1176,9 +1257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1234,10 +1315,10 @@ RectTransform:
   m_Father: {fileID: 735701217}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 5, y: -17.75}
+  m_SizeDelta: {x: 10, y: 35.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144870129
 MonoBehaviour:
@@ -1253,9 +1334,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &1144870130
 MonoBehaviour:
@@ -1379,7 +1457,7 @@ GameObject:
   - component: {fileID: 1930465432}
   m_Layer: 5
   m_Name: Image (7)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1418,9 +1496,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &1930465433
 MonoBehaviour:
@@ -1436,9 +1511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1474,7 +1549,7 @@ GameObject:
   - component: {fileID: 2006529994}
   m_Layer: 5
   m_Name: Image (6)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1513,9 +1588,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &2006529995
 MonoBehaviour:
@@ -1531,9 +1603,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1569,7 +1641,7 @@ GameObject:
   - component: {fileID: 2128480629}
   m_Layer: 5
   m_Name: Image (8)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1608,9 +1680,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &2128480630
 MonoBehaviour:
@@ -1626,9 +1695,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1664,7 +1733,7 @@ GameObject:
   - component: {fileID: 2140698245}
   m_Layer: 5
   m_Name: Image (2)
-  m_TagString: Card
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1677,7 +1746,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140698243}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -250}
+  m_LocalPosition: {x: 0, y: 0, z: -249.99994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1703,9 +1772,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontSprite: {fileID: 21300000, guid: 1bf46ab0209500e45aa45b91fd981395, type: 3}
   backSprite: {fileID: 21300000, guid: 42523ab887a11c146ba67eba86a661bb, type: 3}
-  cardData: {fileID: 11400000, guid: 21631d26431b3de4e811f609522dcbd2, type: 2}
-  shouldFlip: 1
-  bypassRaycast: 0
   uncoverTime: 12
 --- !u!114 &2140698246
 MonoBehaviour:
@@ -1721,9 +1787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []

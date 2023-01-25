@@ -18,12 +18,11 @@ using System;
 using UnityEngine;
 namespace UnusualCommunication
 {
-	[CreateAssetMenu(fileName = "Card Data"), Serializable]
-	public class CardData : ScriptableObject
+	[CreateAssetMenu(fileName = "Card Material Data"), Serializable]
+	public class CardMaterialData : ScriptableObject
 	{
-		[Header("Graphic Setup"), Space] public Sprite frontSprite;
-		public Sprite backSprite;
-		[Space(20)] public QAData[] data;
-
+		[Header("Graphic Setup"), Space] public Material backMaterial;
+		public Material frontMaterial;
 	}
+
 }

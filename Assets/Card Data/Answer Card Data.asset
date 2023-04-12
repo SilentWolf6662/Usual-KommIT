@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2983c694c814cb7a508b2da64f65ab6, type: 3}
   m_Name: Answer Card Data
   m_EditorClassIdentifier: 
-  cardMaterialData: {fileID: 0}
+  cardMaterialData: {fileID: 11400000, guid: bc26150ba33182e4b8badd756765f7e7, type: 2}
   data: []

@@ -235,7 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 2038565005}
@@ -518,7 +519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 1090065165}
@@ -733,7 +735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 763352495}
@@ -1144,7 +1147,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 1604151555}
@@ -1261,7 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 1880848602}
@@ -1378,7 +1383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 347729425}
@@ -1807,7 +1813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 0}
   cardQuestionData: {fileID: 11400000, guid: be73a1cdfac922948ac188164c048b1d, type: 2}
   front: {fileID: 301179496}
@@ -1924,7 +1931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 0}
   cardQuestionData: {fileID: 11400000, guid: be73a1cdfac922948ac188164c048b1d, type: 2}
   front: {fileID: 538197924}
@@ -2237,7 +2245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 0}
   cardQuestionData: {fileID: 11400000, guid: be73a1cdfac922948ac188164c048b1d, type: 2}
   front: {fileID: 586112091}
@@ -2714,7 +2723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 824901413}
@@ -3125,7 +3135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 1376567007}
@@ -3924,7 +3935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd4bae4a19da4574a612db088b673999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  backSpeedMultiplier: 1.5
+  frontSpeedMultiplier: 3
   cardAnswerData: {fileID: 11400000, guid: 31431dac84e8c0046b4567c4af1f6e16, type: 2}
   cardQuestionData: {fileID: 0}
   front: {fileID: 619062036}

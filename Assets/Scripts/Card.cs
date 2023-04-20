@@ -13,7 +13,7 @@
 // ******************************************************************************************************************
 #endregion
 using System.Collections;
-using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 namespace UnusualCommunication
 {
@@ -23,16 +23,17 @@ namespace UnusualCommunication
 		public AnswerCardData cardAnswerData;
 		public QuestionCardData cardQuestionData;
 		private CardMaterialData cardMaterialData;
+		public TMP_Text questionText;
 		[SerializeField] private GameObject front, back;
-		private bool locked;
+		public bool shouldLockAtStart;
+		public bool locked;
 		private bool coroutineAllowed;
-		private bool facedUp;
+		public bool facedUp;
 
 		private void Start()
 		{
 			facedUp = false;
 			coroutineAllowed = true;
-			locked = false;
 
 			if (cardAnswerData != null)
 				cardMaterialData = cardAnswerData.cardMaterialData;
@@ -43,6 +44,8 @@ namespace UnusualCommunication
 				front.GetComponent<MeshRenderer>().materials[0] = cardMaterialData.frontMaterial;
 			if (cardMaterialData.backMaterial != null)
 				back.GetComponent<MeshRenderer>().materials[0] = cardMaterialData.backMaterial;
+			RotateCard();
+			locked = shouldLockAtStart;
 		}
 
 		private void OnMouseDown()
@@ -89,5 +92,7 @@ namespace UnusualCommunication
 			yield return new WaitForSeconds(0);
 			coroutineAllowed = true;
 		}
+
+		
 	}
 }

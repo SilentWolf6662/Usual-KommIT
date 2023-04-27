@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Q1
   m_EditorClassIdentifier: 
   cardMaterialData: {fileID: 11400000, guid: 8f5fdcd485443e84988319b43f203b19, type: 2}
-  question: Q1
+  question: "Firmaets prim\xE6r salg er ikke mad"

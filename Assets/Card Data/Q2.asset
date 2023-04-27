@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Q2
   m_EditorClassIdentifier: 
   cardMaterialData: {fileID: 11400000, guid: 8f5fdcd485443e84988319b43f203b19, type: 2}
-  question: Q2
+  question: "Firmaets m\xE5lgruppe indeb\xE6re byggearbejdere"

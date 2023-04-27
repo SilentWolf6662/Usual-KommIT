@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Q7
   m_EditorClassIdentifier: 
   cardMaterialData: {fileID: 11400000, guid: 8f5fdcd485443e84988319b43f203b19, type: 2}
-  question: Q7
+  question: "Firmaet f\xF8re ikke isamgram"

@@ -14,6 +14,7 @@
 #endregion
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.SceneManagement.SceneManager;
 using Random = UnityEngine.Random;
 namespace UnusualCommunication
@@ -58,9 +59,9 @@ namespace UnusualCommunication
 		{
 			if (!runCode) return;
 			bool nextQuest = false;
-			if (availableCards.Count == 1) 
+			if (availableCards.Count == 1)
 				if (availableCards[0].facedUp)
-					Debug.Log("Won");
+					LoadScene(1);
 			for (int i = 0; i < availableCards.Count; i++)
 			{
 				Card card = availableCards[i];

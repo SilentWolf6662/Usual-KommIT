@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Q8
   m_EditorClassIdentifier: 
   cardMaterialData: {fileID: 11400000, guid: 8f5fdcd485443e84988319b43f203b19, type: 2}
-  question: Q8
+  question: Firmaet er ikke et medie

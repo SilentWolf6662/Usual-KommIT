@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardMaterialData: {fileID: 11400000, guid: bc26150ba33182e4b8badd756765f7e7, type: 2}
   data:
-  - question: Q1
+  - question: "Firmaets prim\xE6r salg er ikke mad"
     answer: 1
-  - question: Q2
+  - question: "Firmaets m\xE5lgruppe indeb\xE6re byggearbejdere"
     answer: 1
-  - question: Q3
+  - question: "Firmaets indeb\xE6re ikke frivilig arbejde"
     answer: 1
-  - question: Q4
+  - question: "Kommunikation er ikke form\xE5let"
     answer: 1
-  - question: Q5
+  - question: Firmaet er udenlandsk
     answer: 1
-  - question: Q6
+  - question: Firmaets fokus er ikke underholdnings relateret
     answer: 1
-  - question: Q7
+  - question: "Firmaet f\xF8re ikke isamgram"
     answer: 1
-  - question: Q8
+  - question: Firmaet er ikke et medie
     answer: 1
